@@ -1,0 +1,10 @@
+#!/bin/sh
+# mount a filesystem of type `proc` to /proc
+mount -t proc nodev /proc
+# mount a filesystem of type `sysfs` to /sys
+mount -t sysfs nodev /sys
+# mount devtmpfs if you forget to configure it in Kernel menuconfig
+# there are two options, uncomment one of them
+# mount -t devtmpfs devtmpfs /dev
+mount -t devtmpfs devtmpfs /dev
+./led &

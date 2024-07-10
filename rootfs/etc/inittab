@@ -1,0 +1,11 @@
+# inittab file 
+#-------------------------------------------------------
+# When system startup, will execute "rcS" script
+::sysinit:/etc/init.d/rcS
+
+# Start "askfirst" shell on the console (Ask the user firstly to press any key)
+ttyS0::askfirst:-/bin/sh
+tty1::askfirst:-/bin/sh
+
+# When restarting the init process, will execute "init"
+::restart:/sbin/init
